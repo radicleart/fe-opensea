@@ -11,6 +11,6 @@ contract Creature is TradeableERC721Token {
   constructor(address _proxyRegistryAddress) TradeableERC721Token("Creature", "OSC", _proxyRegistryAddress) public {  }
 
   function baseTokenURI() public view returns (string memory) {
-    return "https://opensea-creatures-api.herokuapp.com/api/creature/";
+    return "https://loopbomb.com/assets/api/loop/";
   }
 }
