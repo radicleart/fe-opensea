@@ -1,8 +1,8 @@
-## OpenSeaCreatures ERC721 contracts
+## Loopbomb ERC721 contracts
 
-### About OpenSeaCreatures.
+### About Loopbomb.
 
-This is a very simple sample ERC721 for the purposes of demonstrating integration with the [OpenSea](https://opensea.io) marketplace. We include a script for minting the items.
+This is a ERC721 integrating the [Loopbomb](https://loopbomb.com) project with the [Open Sea](https://opensea.io) marketplace. 
 
 Additionally, this contract whitelists the proxy accounts of OpenSea users so that they are automatically able to trade the ERC721 item on OpenSea (without having to pay gas for an additional approval). On OpenSea, each user has a "proxy" account that they control, and is ultimately called by the exchange contracts to trade their items. (Note that this addition does not mean that OpenSea itself has access to the items, simply that the users can list them more easily if they wish to do so)
 
@@ -37,8 +37,41 @@ sudo npm explore npm -g -- npm install node-gyp@latest # Update node-gyp
 ```
 export INFURA_KEY="<your_infura_project_id>"
 export MNEMONIC="<metmask_mnemonic>"
+. .env
 truffle deploy --network rinkeby
 ```
+
+```
+1_initial_migrations.js
+=======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x0084146b08064d756f84fd7d99792c9fc749a5d8c08e9057854a3a07b0ea7bdb
+   > Blocks: 1            Seconds: 12
+   > contract address:    0xAA7B53d2AbeE6D4bd5706d8C600B52bc57416894
+   > block number:        6590408
+   > block timestamp:     1591011590
+   > account:             0xAB1129ad844cf2D039D8D1c82C42086953Ac6abd
+   > balance:             1.258685342
+   > gas used:            225237 (0x36fd5)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00450474 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00450474 ETH
+
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.00450474 ETH
+```
+
 
 ### Minting tokens.
 

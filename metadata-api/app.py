@@ -61,7 +61,7 @@ def creature(token_id):
 
     return jsonify({
         'name': creature_name,
-        'description': "Friendly OpenSea Creature that enjoys long swims in the ocean.",
+        'description': "Friendly OpenSea Loopbomb that enjoys long swims in the ocean.",
         'image': image_url,
         'external_url': 'https://openseacreatures.io/%s' % token_id,
         'attributes': attributes
@@ -77,8 +77,8 @@ def box(token_id):
     _add_attribute(attributes, 'number_inside', [3], token_id)
 
     return jsonify({
-        'name': "Creature Loot Box",
-        'description': "This lootbox contains some OpenSea Creatures! It can also be traded!",
+        'name': "Loopbomb Loot Box",
+        'description': "This lootbox contains some OpenSea Loopbombs! It can also be traded!",
         'image': image_url,
         'external_url': 'https://openseacreatures.io/%s' % token_id,
         'attributes': attributes

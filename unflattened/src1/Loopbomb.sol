@@ -1,6 +1,3 @@
-
-// File: flattened/src1/Loopbomb.sol
-
 /**
  *Submitted for verification at Etherscan.io on 2020-03-30
 */
@@ -1392,8 +1389,8 @@ contract LoopbombCore is Ownable, ERC721Full {
     // Management methods
     function create(string memory _name, bytes memory _data, bytes memory _palette) public payable returns (uint) {
         require(msg.value >= mintPrice, "Not enough ether to mint this token!");
-        //require(_data.length == 1024, "The byte array length should be of 1024.");
-        //require(_palette.length == 48, "The palette array length should be of 48.");
+        require(_data.length == 1024, "The byte array length should be of 1024.");
+        require(_palette.length == 48, "The palette array length should be of 48.");
 
         if (msg.value > mintPrice) {
             msg.sender.transfer(msg.value - mintPrice);
