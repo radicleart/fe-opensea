@@ -1,6 +1,3 @@
-
-// File: flattened/src1/Loopbomb.sol
-
 /**
  *Submitted for verification at Etherscan.io on 2020-03-30
 */
@@ -397,7 +394,7 @@ library Address {
      * It is unsafe to assume that an address for which this function returns
      * false is an externally-owned account (EOA) and not a contract.
      *
-     * Among others, `isContract` will return false for the following
+     * Among others, `isContract` will return false for the following 
      * types of addresses:
      *
      *  - an externally-owned account
@@ -1355,22 +1352,22 @@ library Strings {
     }
 }
 
-// File: contracts/LoopbombCore.sol
+// File: contracts/PixelChainCore.sol
 
 pragma solidity ^0.5.0;
 
 
 
 
-contract LoopbombCore is Ownable, ERC721Full {
-    event LoopbombCreated(uint id, address author, string name, bytes data, bytes palette);
+contract PixelChainCore is Ownable, ERC721Full {
+    event PixelChainCreated(uint id, address author, string name, bytes data, bytes palette);
 
-    string public name = "Loopbomb";
+    string public name = "PixelChain";
     string public symbol = "PXC";
     string baseTokenUri = "";
     uint256 mintPrice = 0;
 
-    struct Loopbomb {
+    struct PixelChain {
         string name;
         bytes data;
         bytes palette;
@@ -1378,7 +1375,7 @@ contract LoopbombCore is Ownable, ERC721Full {
         uint256 date;
     }
 
-    Loopbomb[] public loopbombs;
+    PixelChain[] public pixelChains;
 
     constructor() ERC721Full(name, symbol) public { }
 
@@ -1399,14 +1396,14 @@ contract LoopbombCore is Ownable, ERC721Full {
             msg.sender.transfer(msg.value - mintPrice);
         }
 
-        uint id = loopbombs.push(Loopbomb(_name, _data, _palette, msg.sender, block.timestamp)) - 1;
+        uint id = pixelChains.push(PixelChain(_name, _data, _palette, msg.sender, block.timestamp)) - 1;
         _mint(msg.sender, id);
-        emit LoopbombCreated(id, msg.sender, _name, _data, _palette);
+        emit PixelChainCreated(id, msg.sender, _name, _data, _palette);
         return id;
     }
 
     function retrieve(uint256 _id) public view  returns (string memory, bytes memory, bytes memory, address, uint256) {
-        return (loopbombs[_id].name, loopbombs[_id].data, loopbombs[_id].palette, loopbombs[_id].author, loopbombs[_id].date);
+        return (pixelChains[_id].name, pixelChains[_id].data, pixelChains[_id].palette, pixelChains[_id].author, pixelChains[_id].date);
     }
 
     function setBaseTokenURI(string memory _uri) public onlyOwner {
