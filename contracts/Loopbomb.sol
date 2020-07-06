@@ -1366,7 +1366,7 @@ contract LoopbombCore is Ownable, ERC721Full {
     event LoopbombCreated(uint id, address author, string name, bytes data, bytes palette);
 
     string public name = "Loopbomb";
-    string public symbol = "PXC";
+    string public symbol = "LOOP";
     string baseTokenUri = "";
     uint256 mintPrice = 0;
 
