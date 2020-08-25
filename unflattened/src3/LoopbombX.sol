@@ -4,13 +4,13 @@ import 'openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol';
 import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
 import './Strings.sol';
 
-contract LoopbombCore is Ownable, ERC721Full {
+contract Loopbomb is Ownable, ERC721Full {
     event LoopbombCreated(uint id, address author);
 
     string public name = "Loopbomb";
     string public symbol = "LOOP";
-    string baseTokenUri = "";
-    uint256 mintPrice = 0;
+    string baseTokenUri = "https://loopbomb.com/assets/api/v1/loop/1/";
+    uint256 mintPrice = 5000000000000000;
 
     struct Loopbomb {
         address author;
