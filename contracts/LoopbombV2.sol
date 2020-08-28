@@ -1125,7 +1125,7 @@ contract LoopbombV2 is Ownable, ERC721Full {
 
     string public name = "Loopbomb";
     string public symbol = "LOOP";
-    string baseTokenUri = "https://loopbomb.com/assets/api/v1/loop/1/";
+    string baseTokenUri = "https://loopbomb.com/assets/api/v2/loop/1/";
     uint256 mintPrice = 5000000000000000;
 
     struct Loopbomb {
