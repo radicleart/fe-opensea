@@ -1,8 +1,8 @@
-## Loopbomb ERC721 contracts
+# Loopbomb ERC721 contracts
 
-### About Loopbomb.
+## About Loopbomb
 
-This is a ERC721 integrating the [Loopbomb](https://loopbomb.com) project with the [Open Sea](https://opensea.io) marketplace. 
+This is a ERC721 integrating the [Loopbomb](https://loopbomb.com) project with the [Open Sea](https://opensea.io) marketplace.
 
 Additionally, this contract whitelists the proxy accounts of OpenSea users so that they are automatically able to trade the ERC721 item on OpenSea (without having to pay gas for an additional approval). On OpenSea, each user has a "proxy" account that they control, and is ultimately called by the exchange contracts to trade their items. (Note that this addition does not mean that OpenSea itself has access to the items, simply that the users can list them more easily if they wish to do so)
 
@@ -71,7 +71,6 @@ Summary
 > Total deployments:   1
 > Final cost:          0.00450474 ETH
 ```
-
 
 ### Minting tokens.
 
